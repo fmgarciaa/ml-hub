@@ -1,0 +1,24 @@
+services:
+    jupyterhub:
+        build: ./docker # Build from the Dockerfile inside the "docker" directory
+        container_name: jupyterhub_ml
+
+        ports:
+            - "8000:8000"
+
+        volumes:
+            - ./notebooks:/home/jupyter/notebooks # Persist notebooks locally
+            - ${AWS_CREDENTIALS_PATH}:/root/.aws:ro # Mount AWS credentials (read-only)
+
+        environment:
+            - JUPYTERHUB_CONFIG=/etc/jupyterhub/jupyterhub_config.py
+
+        # Automatically restart the container if it crashes
+        restart: unless-stopped # Recommended over "always" to prevent restart loops
+
+        # Health check to ensure JupyterHub is running
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:8000/hub/health"]
+            interval: 30s
+            timeout: 10s
+            retries: 5

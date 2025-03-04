@@ -1,0 +1,93 @@
+# ---- 1. Python ----
+# Ignore compiled Python files and caches
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.pyo
+*.pyd
+*.pyc
+
+# ---- 2. Virtual Environments ----
+# Ignore virtual environment directories and dependency manager files
+venv/
+.venv/
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# ---- 3. Local Configuration and Logs ----
+# Ignore logs, temporary files, and OS-specific files
+*.log
+*.out
+*.pid
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ---- 4. Environment Variables ----
+# Ignore .env files to avoid committing sensitive credentials
+.env
+
+# ---- 5. Machine Learning Data ----
+# Ignore datasets, intermediate results, and large files
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.sav
+
+# ---- 6. Jupyter Notebooks ----
+# Ignore Jupyter notebook checkpoints and temporary files
+.ipynb_checkpoints/
+*.ipynb_checkpoint
+outputs/
+wandb/
+
+# ---- 7. Docker-related Files ----
+# Ignore local Docker configurations
+docker-compose.override.yml
+*.iml
+*.lock
+*.pid
+
+# ---- 8. Trained Models ----
+# Ignore trained model files and checkpoints
+models/
+checkpoints/
+*.pt
+*.pth
+*.h5
+*.onnx
+*.tflite
+*.pb
+*.ckpt
+*.weights
+
+# ---- 9. Caches and Temporary Files ----
+# Ignore cache directories, test artifacts, and temporary results
+*.cache
+__pycache__/
+*.pytest_cache/
+*.ipynb_checkpoints/
+logs/
+results/
+saved_models/

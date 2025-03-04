@@ -1,0 +1,31 @@
+# Essential libraries for data handling and analysis
+pandas           # Data manipulation and analysis
+
+# Machine Learning libraries
+scikit-learn     # Machine learning models and utilities
+numpy            # Numerical computations (dependency for many ML libraries)
+scipy            # Scientific computing (used in ML models)
+joblib           # Efficient model serialization and parallel computing
+
+# AWS SDK and S3 interaction
+boto3            # AWS SDK for Python (used to interact with AWS services)
+s3fs             # Interface to read and write data from S3 directly using pandas
+
+# Deep Learning and Neural Networks
+tensorflow       # Deep Learning framework (optional, for neural networks)
+torch           # PyTorch for deep learning models
+torchvision     # Image processing utilities for PyTorch
+
+# Data visualization
+matplotlib       # Data visualization library
+seaborn          # Statistical data visualization
+
+# Jupyter and notebook environment
+jupyterhub       # Multi-user Jupyter environment
+jupyterlab       # Modern interactive development environment for notebooks
+notebook         # Classic Jupyter Notebook interface
+
+# Utility and logging
+tqdm             # Progress bar visualization
+loguru           # Advanced logging for Python
+
